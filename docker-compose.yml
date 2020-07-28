@@ -3,8 +3,6 @@ version: '3'
 services:
   hack-news-frontend:
     build: ./hack-news-frontend
-    volumes:
-      - ./hack-news-frontend:/app
     ports:
       - 3000:3000
     environment:
