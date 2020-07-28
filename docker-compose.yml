@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  hack-news-frontend:
+    build: ./hack-news-frontend
+    volumes:
+      - ./hack-news-frontend:/app
+    ports:
+      - 3000:3000
+    environment:
+      - CI=true
+      - BACKEND_URL=hack-news-backend
+    depends_on:
+      - hack-news-backend
+      
+  db:
+    image: postgres:12.3-alpine
+    command: 'postgres -c "max_connections=200"'
+    environment:
+      - POSTGRES_USER=random
+      - POSTGRES_PASSWORD=root
+
+  hack-news-backend:
+    build: ./hack_news_backend
+    environment:
+      - DATABASE_URL=postgres://random:root@db/hack_news_backend_dev
+    depends_on:
+      - db
+    ports:
+      - "4000:4000"
+    command: './migrate_and_run.sh'
