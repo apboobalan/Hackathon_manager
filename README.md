@@ -17,6 +17,8 @@
 - At later part, due to time constraints, repeated tests(tests of same type) were omitted.
 - Sample tests for components, actions, reducers, views, controllers etc are added to show variations.
 
+- `docker-compose up` to run. To run separately follow below instructions.
+
 ### To Run React:
 - npm install
 - npm test
