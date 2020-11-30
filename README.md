@@ -1,5 +1,6 @@
 ### Hacknews frontend in React and backend in Elixir.
-
+Site to list hackathons and form teams to participate.
+`docker-compose up --build` to visit localhost:3000 to up the site.
 - The commits show the evolution of code over time with TDD.
 - Frontend is split into components, containers, actions, reducers.
 - Vote.js is experimented with a different pattern of having component, container, actions, reducers in a single file.
