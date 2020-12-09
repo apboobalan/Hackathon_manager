@@ -1,5 +1,12 @@
 ### Hacknews frontend in React and backend in Elixir.
+
+Clone this repo.
 Site to list hackathons and form teams to participate.
+
+Inside the directory,
+clone https://github.com/apboobalan/hack_news_backend
+and https://github.com/apboobalan/hack_news_frontend
+
 `docker-compose up --build` to visit localhost:3000 to up the site.
 - The commits show the evolution of code over time with TDD.
 - Frontend is split into components, containers, actions, reducers.
